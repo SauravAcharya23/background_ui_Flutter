@@ -1,3 +1,4 @@
+import 'package:background_ui/custom_clipper.dart';
 import 'package:flutter/material.dart';
 
 class OrangeCurvedBackground extends StatefulWidget {
@@ -17,6 +18,7 @@ class _OrangeCurvedBackgroundState extends State<OrangeCurvedBackground> {
         child: Stack(
           children: [
             ClipPath(
+              clipper: OrangeCurveClipper(),
               child: Container(
                 height: MediaQuery.of(context).size.height * .5,
                 decoration: BoxDecoration(
